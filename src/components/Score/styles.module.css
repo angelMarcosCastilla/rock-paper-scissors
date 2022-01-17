@@ -1,0 +1,18 @@
+.score {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  text-align: center;
+}
+
+.score p{
+  color:#2a46c0;
+  margin-bottom: 0;
+  
+}
+
+
+.score span{
+  font-size: 1.1rem;
+  font-weight: 700;
+}

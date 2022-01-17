@@ -4,11 +4,13 @@ import Picker from "../Picker";
 import { optionPicker } from "../../utils/pickerOption";
 import Button from "../Button";
 import { ValidateGame } from "../../utils/validateGame";
+import { tablero } from "../../utils/tablero";
 
 function ResultBoard() {
   const { isSelection, pickSelection } = usePicker();
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [results, setResults] = useState("");
+  const { setScore, setIsSelection } = usePicker();
 
   useEffect(() => {
     let random = 0;
@@ -20,31 +22,34 @@ function ResultBoard() {
 
       setTimeout(() => {
         clearInterval(interval);
-        const winplayer = ValidateGame(pickSelection.id, random)
-        setResults(winplayer)
+        const winplayer = ValidateGame(pickSelection.id, random);
+        setResults(winplayer);
+        setScore((prevState) => prevState + tablero[winplayer]);
       }, 1000);
-      console.log("esperamdos")
     }
-   
-  }, [isSelection]);
+  }, [isSelection, pickSelection.id, setScore]);
 
+  const handleTryAgain = () => {
+    setIsSelection(false);
+    setResults("");
+  };
   if (!isSelection) return null;
 
   return (
     <div>
       <div>
         <span>YOU SELECTED</span>
-        <Picker {...pickSelection} />
+        <Picker {...pickSelection} show={results === "win"} />
       </div>
       {results && (
         <div>
           <span>{results}</span>
-          <Button text="try again" />
+          <Button text="try again" onClick={handleTryAgain} />
         </div>
       )}
       <div>
         <span>COMPUTER SELECTS</span>
-        <Picker {...selectedPlayer} />
+        <Picker {...selectedPlayer} show={results === "lose"} />
       </div>{" "}
     </div>
   );
