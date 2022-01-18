@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Board from "./components/Board";
 import "./App.js";
 import Button from "./components/Button";
-import RulesModal from "./components/RulesModal";
+import RulesModal from "./components/RulesModal/index";
 import useModal from "./Hooks/useModal";
 
 function App() {
