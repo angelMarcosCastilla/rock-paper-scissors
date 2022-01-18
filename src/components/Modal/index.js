@@ -20,7 +20,7 @@ function Modals({ handleCloseModal }) {
 }
 
 function Modal({handleCloseModal}) {
-  return createPortal(<Modal handleCloseModal={handleCloseModal}/>, document.getElementById("portal")) ;
+  return createPortal(<Modals handleCloseModal={handleCloseModal}/>, document.getElementById("portal")) ;
 }
 
 export default Modal;
