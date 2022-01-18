@@ -20,7 +20,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+footer, header, main{
+  max-width: 900px;
+  width: 97%;
+  margin: auto;
+}
 header {
   width: 50%;
   margin: 0 auto;
@@ -31,10 +35,49 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
+@media (max-width: 500px) {
+  header{
+    width: 98%;
+  }
+ 
+}
+main {
+  display: grid;
+  place-content: center;
+  color:#eee;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  
+}
+button{
+  cursor: pointer;
+}
+footer button{
+  
+  display: block;
+  margin-left: auto;
+}
+span{
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.text-2{
+  font-size: 2rem;
+  font-weight: 700;
+}
 .gano {
-  box-shadow: 0 0 10px red, 0 0 20px green, 0 0 30px orange;
+  box-shadow: 0 0 10px 20px rgba(255, 255, 255, 0.01),
+              0 0 20px 20px rgba(255, 255, 255, 0.03), 
+              0 0 50px 30px rgba(255, 255, 255, 0.06),
+              0 0 70px 40px rgba(255, 255, 255, 0.08),
+              0 0 80px 60px rgba(255, 255, 255, 0);
+  transition: all .5s ease-in-out;
 }
 
 .picker {
@@ -47,3 +90,17 @@ header {
   place-content: center;
   cursor: pointer;
 }
+
+@media (max-width: 360px) {
+  .picker{
+    width: 130px;
+    height: 130px;
+  }
+}
+.flex{
+  display: flex;
+  align-items: center;
+  gap:70px ;
+  margin: auto;  
+}
+

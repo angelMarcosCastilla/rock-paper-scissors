@@ -1,5 +1,4 @@
 import usePicker from "../../Hooks/usePicker";
-import style from "./styles.module.css";
 import { optionPicker } from "../../utils/pickerOption";
 
 function Picker({ color, url, id, show }) {

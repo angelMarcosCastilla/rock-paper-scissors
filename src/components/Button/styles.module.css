@@ -1,0 +1,15 @@
+.primary{
+  background-color: white;
+  padding: .5rem 2rem ;
+  border-radius: 10px;
+  color:hsl(214, 47%, 23%);
+  font-weight: 700;
+}
+
+.outline{
+  padding: .5rem 2rem ;
+  border-radius: 2px;
+  background-color: transparent;
+  color:white;
+  border : 1px solid currentColor;
+}

@@ -36,15 +36,15 @@ function ResultBoard() {
   if (!isSelection) return null;
 
   return (
-    <div>
+    <div className="flex">
       <div>
         <span>YOU SELECTED</span>
         <Picker {...pickSelection} show={results === "win"} />
       </div>
       {results && (
         <div>
-          <span>{results}</span>
-          <Button text="try again" onClick={handleTryAgain} />
+          <span className="text-2"> YOU {results}</span>
+          <Button text="PLAY AGAIN" onClick={handleTryAgain}  primary/>
         </div>
       )}
       <div>

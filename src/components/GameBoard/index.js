@@ -11,7 +11,7 @@ function GameBoard() {
   return (
     <main >
      <div className={style.mainGame}>
-     <img className={style.bgTriangle} src="./images/bg-triangle.svg"/>   
+     <img className={style.bgTriangle} src="./images/bg-triangle.svg" alt=""/>   
      {
        optionPicker.map(pick => <Picker key={pick.id} {...pick}/>)
      }
