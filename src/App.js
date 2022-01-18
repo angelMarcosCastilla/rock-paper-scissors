@@ -4,7 +4,7 @@ import Board from "./components/Board";
 import "./App.js";
 import Button from "./components/Button";
 import useModal from "./Hooks/useModal";
-import RulesModal from "./components/RulesModal";
+import RulesModal from "./components/RulesModal/index.js";
 
 function App() {
   const { isOpen, handleCloseModal, handleOpenModal } = useModal();
