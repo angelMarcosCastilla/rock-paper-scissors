@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import styles from "./styles.module.css";
 
-function Modal({ handleCloseModal }) {
+function Modals({ handleCloseModal }) {
   return(
   <div className={styles.containerModal} onClick={handleCloseModal}>
     <div className={styles.modal}>
@@ -19,8 +19,8 @@ function Modal({ handleCloseModal }) {
   )
 }
 
-function RulesModal({handleCloseModal}) {
+function Modal({handleCloseModal}) {
   return createPortal(<Modal handleCloseModal={handleCloseModal}/>, document.getElementById("portal")) ;
 }
 
-export default RulesModal;
+export default Modal;
