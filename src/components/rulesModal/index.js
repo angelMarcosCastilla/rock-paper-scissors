@@ -2,6 +2,7 @@ import { createPortal } from "react-dom"
 import styles from "./styles.module.css"
 
 function Modal({handleCloseModal}) {
+  
   return createPortal (
     <div className={styles.containerModal} onClick={handleCloseModal}>
       <div className={styles.modal}>
